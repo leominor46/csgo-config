@@ -1,0 +1,141 @@
+sv_cheats 1  
+//开启作弊模式（部分指令需要开启作弊模式才能起效）
+
+//developer 1  
+//开启开发者模式（开启后游戏左上角会显示一些当前状态的文本，方便玩家确认一些指令是否处于开启状态，例如：gods on代表全体无敌处于开启状态）
+
+sv_grenade_trajectory 1 
+//开启显示投掷物轨迹
+sv_grenade_trajectory_dash 1
+//抛物线为点状虚线
+sv_grenade_trajectory_thickness 0.3
+//抛物线粗细度
+
+sv_infinite_ammo 2
+//无限弹药（包括投掷物无限）
+
+mp_maxmoney 65535 
+//最高金钱65535（这是游戏允许的最大金钱，如果设置的数值超过这个值将导致数值溢出，从而返回一个较低值）
+
+mp_startmoney 65535 
+//开始金钱65535
+
+mp_roundtime_defuse 60 
+//竞技模式回合时长60分钟
+
+mp_freezetime 0 
+//回合开始时的玩家冻结时间为0
+
+mp_buytime 3600 
+//允许进行购买的时间为3600秒
+
+mp_buy_anywhere 1 
+//开启允许在任意地点进行购买
+
+ammo_grenade_limit_total 5 
+//玩家可携带的投掷物种类为5（即可以携带所有种类的投掷物）
+
+mp_limitteams 6 
+//队伍最大相差人数为6
+
+mp_autoteambalance 0 
+//关闭双方人数自动平衡（加机器人的时候比较方便）
+
+sv_regeneration_force_on 1
+//受伤后HP自动恢复 
+
+bot_stop 1 
+//开启机器人停止
+
+mp_t_default_grenades "weapon_molotov weapon_decoy weapon_flashbang weapon_hegrenade weapon_smokegrenade" 
+//匪在重生时（含游戏开始时）默认带有燃烧瓶、诱饵手雷、闪光弹、高爆手雷、烟雾弹
+
+mp_ct_default_grenades "weapon_incgrenade weapon_decoy weapon_flashbang weapon_hegrenade weapon_smokegrenade" 
+//警在重生时（含游戏开始时）默认带有燃烧弹、诱饵手雷、闪光弹、高爆手雷、烟雾弹
+
+mp_free_armor 2 
+//警和匪在重生时（含游戏开始时）默认拥有防弹衣+头盔
+
+mp_respawn_on_death_t 1 
+//匪在死亡后1秒自动重生
+
+mp_respawn_on_death_ct 1  
+//警在死亡后1秒自动重生
+
+mp_restartgame 1  
+//1秒后刷新服务器
+
+cl_showpos 1
+//速度显示（1.开启0.关闭）
+
+sv_showlagcompensation 1
+//Hitbox模型显示（1.显示0.关闭）
+
+sv_showbullethits 1
+//子弹命中位置显示（1.显示0.关闭）
+
+mp_ignore_round_win_conditions 1
+//禁止胜利条件
+
+mp_drop_knife_enable 1
+//开启丢刀（1.开启0.关闭）
+
+mp_drop_grenade_enable 1
+//开启丢雷（1.开启0.关闭）
+cl_grenadepreview 1
+//抛物线轨迹实时预览（1.开启0.关闭）
+showtriggers_toggle
+//显示C4安放区域
+
+bot_chatter off
+//关闭bot语音
+
+bind "mouse4" noclip  
+//绑定F1开启/关闭人物飞行（无视障碍物）
+
+bind "f4" sv_rethrow_last_grenade 
+//绑定重现上一个投掷物
+
+bind "KP_END" "toggle bot_crouch 1 0"  
+//绑定小键盘1开启/关闭BOT蹲伏
+
+bind "KP_DOWNARROW" "bot_place"  
+//绑定小键盘2放置BOT在准星所在位置（首先要存在BOT）（一般来说想把一个BOT放置在自己当前位置只需要把准星拉到自己脚上即可完成，然后你的人物会卡住，这时使用人物飞行离开那个位置就好。然而有一些位置比如栏杆在上用这种方式放置则会导致BOT卡在栏杆上）
+
+bind "KP_INS" "gods" 
+//绑定小键盘0开启/关闭所有玩家无敌（含BOT）
+
+bind "KP_LEFTARROW" "bot_add_ct" 
+//绑定小键盘4添加1个警
+
+bind "KP_5" "bot_kick ct" 
+//绑定小键盘5踢出1个警
+
+bind "KP_HOME" "bot_add_t" 
+//绑定小键盘7添加1个匪
+
+bind "KP_UPARROW" "bot_kick t" 
+//绑定小键盘8踢出1个匪
+
+bind "KP_PGUP" "mp_restartgame 1" 
+//绑定小键盘9在1秒后刷新服务器（无论是需要清除血迹或者爆炸痕迹或是任何想要快速结束当前回合的时候都可以直接用这个，比单独调整那些参数方便的多）
+
+bind "KP_RIGHTARROW" "give weapon_ak47" 
+//绑定小键盘6给予一把ak47（不花费金钱）（如果需要这项可以替换成其他武器，不过对我而言两个绑定的武器键位一把主战步枪一把狙完全可以很好地模拟实战中敌方架点的情况）
+
+bind "KP_PGDN" "give weapon_awp" 
+//绑定小键盘3给予一把AWP（不花费金钱）
+
+//bind "KP_MINUS" "toggle developer 0 1" 
+//绑定小键盘-关闭/开启开发者模式——完成跑图练习退出比赛前请按一下这个键把开发者模式关掉，否则再次进入其他的比赛时游戏左上角的状态文本依旧会显示，多少会有些影响正常游戏。如果退出前忘了关也可以在另一场比赛中按这个键把开发者模式关掉。
+
+//通过alias指令加速游戏时间使烟雾弹和燃烧弹快速消散（如要手动输入到控制台内需在前一个指令后加";"）
+alias +speedup "host_timescale 10";
+alias -speedup "host_timescale 1";
+bind "F8" "+speedup"
+//按住即可加速，松开恢复正常
+
+bind "F5" "toggle r_drawclipbrushes 1 2 3 0"
+//切换空气墙（1.为线条显示2.人物阻挡空气墙3.投掷物阻挡0.关闭）
+
+bind "Leftarrow" "toggle r_drawothermodels 1 2" //按←键透视模式开关切换
